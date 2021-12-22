@@ -11,9 +11,25 @@
  onclick="document.getElementById('demo').innerHTML = Date()">
  点击我来显示日期和时间
  </button>
- <p id="demo"></p>
- <p>
-  <img src="/pic/01.png" width="1000" height="600" />
- </p>
+  
+ <script>
+function light(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "/i/eg_bulboff.gif"
+  } else {
+    pic = "/i/eg_bulbon.gif"
+  }
+  document.getElementById('myImage').src = pic;
+}
+</script>
+  
+<img id="myImage" src="/i/eg_bulboff.gif" width="109" height="180">
+
+<p>
+<button type="button" onclick="light(1)">开灯</button>
+<button type="button" onclick="light(0)">关灯</button>
+</p>
+
  </body>
 </html>
